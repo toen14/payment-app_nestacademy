@@ -1,4 +1,6 @@
-import { PartialType } from "@nestjs/mapped-types";
-import { CreateBriDto } from "./create-bri.dto";
+import { IsInt } from "class-validator";
 
-export class UpdateBriDto extends PartialType(CreateBriDto) {}
+export class UpdateBriDto {
+  @IsInt()
+  amount: number;
+}

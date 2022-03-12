@@ -1,4 +1,7 @@
+import { IsInt, IsNotEmpty } from "class-validator";
+
 export class CreateBriDto {
-  userId: number;
+  @IsInt()
+  @IsNotEmpty()
   amount: number;
 }
