@@ -1,4 +1,4 @@
-import databaseConfig from "src/v1/cummon/config/database.config";
+import databaseConfig from "src/v1/common/config/database.config";
 import { Bri } from "src/v1/bri/entities/bri.entity";
 import { User } from "src/v1/user/entities/user.entity";
 

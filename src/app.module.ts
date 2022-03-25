@@ -4,8 +4,8 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 
 import { BriModule } from "./v1/bri/bri.module";
-import configuration from "./v1/cummon/config/configuration";
-import databaseConfig from "./v1/cummon/config/database.config";
+import configuration from "./v1/common/config/configuration";
+import databaseConfig from "./v1/common/config/database.config";
 import { UserModule } from "./v1/user/user.module";
 
 @Module({

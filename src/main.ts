@@ -7,7 +7,7 @@ import {
 } from "@nestjs/platform-express";
 
 import { AppModule } from "./app.module";
-import { SnackCaseInterceptor } from "./v1/cummon/interceptors/snake-case.interceptor";
+import { SnackCaseInterceptor } from "./v1/common/interceptors/snake-case.interceptor";
 // import { ValidationPipe } from "./v1/cummon/pipes/validation.pipe";
 
 async function bootstrap() {
