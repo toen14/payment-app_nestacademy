@@ -35,7 +35,9 @@ content-type: application/json
 {
     "name": "La Egex",
     "email": "email@email.com",
-    "kabKota": "Raha"
+    "kabKota": "Raha",
+    "password": "12345678",
+    "role": "Admin"
 }
 
 ###

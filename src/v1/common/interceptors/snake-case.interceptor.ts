@@ -44,9 +44,10 @@ export class SnackCaseInterceptor<T>
         if (data instanceof User) {
           return {
             id: data.id,
-            emai: data.email,
+            email: data.email,
             name: data.name,
             bri_id: data.bri,
+            role: data.role,
             createt_at: data.createtAt,
             update_at: data.updateAt,
           };
@@ -55,9 +56,10 @@ export class SnackCaseInterceptor<T>
         if (Array.isArray(data) && data[0] instanceof User) {
           return data.map((user: User) => ({
             id: user.id,
-            emai: user.email,
+            email: user.email,
             name: user.name,
             bri_id: user.bri,
+            role: user.role,
             createt_at: user.createtAt,
             update_at: user.updateAt,
           }));
