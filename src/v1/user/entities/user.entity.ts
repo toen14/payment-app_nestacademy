@@ -5,6 +5,7 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -12,7 +13,8 @@ import {
 import bcrypt from "bcrypt";
 
 import { Bri } from "src/v1/bri/entities/bri.entity";
-import { RoleEnum } from "../../common/config/role.enum"
+import { RoleEnum } from "../../common/config/role.enum";
+import { RefreshToken } from "src/v1/auth/entities/refresh-token.entity";
 
 @Entity()
 export class User {
@@ -28,7 +30,7 @@ export class User {
   @Column()
   kabKota: string;
 
-  @Column({ type: 'enum', enum: RoleEnum })
+  @Column({ type: "enum", enum: RoleEnum })
   role: RoleEnum;
 
   @Column()
@@ -52,4 +54,7 @@ export class User {
   @OneToOne(() => Bri)
   @JoinColumn()
   bri: Bri;
+
+  @OneToMany(() => RefreshToken, (refreshToken) => refreshToken.user)
+  refreshTokens: RefreshToken;
 }

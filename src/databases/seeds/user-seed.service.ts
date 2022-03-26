@@ -19,7 +19,10 @@ export class UserSeedService {
 
   async seed(): Promise<void> {
     const bris = await this.briRepository.find();
-    const users: Omit<User, "id" | "hashPassword" | "createtAt" | "updateAt">[] = [];
+    const users: Omit<
+      User,
+      "id" | "hashPassword" | "createtAt" | "updateAt" | "refreshTokens"
+    >[] = [];
 
     bris.forEach((bri) =>
       users.push({

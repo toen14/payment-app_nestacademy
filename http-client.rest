@@ -38,7 +38,7 @@ content-type: application/json
 
 {
     "name": "La Egex",
-    "email": "email@email.com",
+    "email": "12email@email.com",
     "kabKota": "Raha",
     "password": "12345678",
     "role": "Admin"
@@ -65,6 +65,22 @@ POST http://localhost:3000/api/v1/auth/login HTTP/1.1
 content-type: application/json
 
 {
-    "email": "Stacy81@yahoo.com",
+    "email": "email@example.com",
     "password": "12345678"
 }
+
+###
+GET http://localhost:3000/api/v1/auth/refresh-token HTTP/1.1
+content-type: application/json
+Authorization: Bearer 
+
+###
+GET http://localhost:3000/api/v1/auth/logout HTTP/1.1
+content-type: application/json
+Authorization: Bearer 
+
+###
+GET http://localhost:3000/api/v1/auth/logout-refresh-tokens HTTP/1.1
+content-type: application/json
+Authorization: Bearer 
+
