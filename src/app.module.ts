@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { RouterModule } from "@nestjs/core";
+import { APP_GUARD, RouterModule } from "@nestjs/core";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 
@@ -7,6 +7,8 @@ import { BriModule } from "./v1/bri/bri.module";
 import configuration from "./v1/common/config/configuration";
 import databaseConfig from "./v1/common/config/database.config";
 import { UserModule } from "./v1/user/user.module";
+import { AuthModule } from "./v1/auth/auth.module";
+import { JwtAuthGuard } from "./v1/auth/guards/jwt-auth.guard";
 
 @Module({
   imports: [
@@ -31,6 +33,13 @@ import { UserModule } from "./v1/user/user.module";
     ]),
     BriModule,
     UserModule,
+    AuthModule,
+  ],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
   ],
 })
 export class AppModule {}
