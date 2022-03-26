@@ -13,7 +13,8 @@ export class UserService {
   ) {}
 
   create(createUserDto: CreateUserDto): Promise<User> {
-    return this.userRepository.save(createUserDto);
+    const user = this.userRepository.create(createUserDto);
+    return this.userRepository.save(user);
   }
 
   findAll(): Promise<User[]> {

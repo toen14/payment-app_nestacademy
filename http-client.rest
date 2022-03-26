@@ -1,6 +1,6 @@
 GET http://localhost:3000/api/v1/bri HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmljYXJkbyBGcmFuZXkiLCJzdWIiOjEzNywicm9sZSI6IkFkbWluIiwiaWF0IjoxNjQ4MjU5MDUzLCJleHAiOjE2NDgyNjI2NTN9.OQ4zcgeQn3XEqnn4EIbPCPIfWaYdDOOEUJD-y9Mkmto
+Authorization: Bearer 
 
 ###
 POST http://localhost:3000/api/v1/bri HTTP/1.1
@@ -30,7 +30,7 @@ DELETE http://localhost:3000/api/v1/bri/1 HTTP/1.1
 ### User
 GET http://localhost:3000/api/v1/user HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmljYXJkbyBGcmFuZXkiLCJzdWIiOjEzNywicm9sZSI6IkFkbWluIiwiaWF0IjoxNjQ4MjU5MDUzLCJleHAiOjE2NDgyNjI2NTN9.OQ4zcgeQn3XEqnn4EIbPCPIfWaYdDOOEUJD-y9Mkmto
+Authorization: Bearer 
 
 ###
 POST http://localhost:3000/api/v1/user HTTP/1.1
@@ -38,7 +38,7 @@ content-type: application/json
 
 {
     "name": "La Egex",
-    "email": "12email@email.com",
+    "email": "email@email.com",
     "kabKota": "Raha",
     "password": "12345678",
     "role": "Admin"

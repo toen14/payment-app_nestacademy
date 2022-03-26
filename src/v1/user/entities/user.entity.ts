@@ -10,7 +10,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 
 import { Bri } from "src/v1/bri/entities/bri.entity";
 import { RoleEnum } from "../../common/config/role.enum";
